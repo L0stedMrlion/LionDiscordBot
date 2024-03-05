@@ -1,12 +1,21 @@
 import 'dotenv/config';
-import { Client } from 'discord.js';
+import { Client, GatewayIntentBits } from 'discord.js';
+import { CommandKit } from 'commandkit';
+import path from 'path';
 
 const client = new Client({
-  intents: ['Guilds', 'GuildMessages', 'GuildMembers', 'MessageContent']
+  intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.MessageContent
+  ]
 });
 
-client.on('ready', (c) => {
-  console.log(`${c.user.username} is online.`);
+new CommandKit({
+  client,
+  commandsPath: path.join(__dirname, 'commands'),
+  skipBuiltInValidations: true,
+  bulkRegister: true
 });
 
 client.login(process.env.TOKEN);
