@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "build": "tsc",
-    "start": "node ."
+    "start": "node .",
+    "prettier": "prettier --config .prettierrc 'src/**/*.ts' --write",
+    "prettier-watch": "onchange 'src/**/*.ts' -- prettier --write {{changed}}"
   },
   "keywords": [],
   "author": "Mrlion",
@@ -17,6 +19,9 @@
   },
   "devDependencies": {
     "@types/node": "^20.11.24",
+    "eslint": "^8.57.0",
+    "onchange": "^7.1.0",
+    "prettier": "^3.2.5",
     "tsx": "^4.7.1"
   }
 }
