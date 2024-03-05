@@ -1,0 +1,22 @@
+{
+  "name": "liondiscordbot",
+  "version": "1.0.0",
+  "description": "🦁 Mrlion's Discord bot",
+  "main": "build/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node ."
+  },
+  "keywords": [],
+  "author": "Mrlion",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "tsx": "^4.7.1"
+  }
+}
