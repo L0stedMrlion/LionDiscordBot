@@ -6,5 +6,6 @@ export default function (
   client: Client<true>,
   handler: CommandKit
 ) {
-  console.log(`${c.user.username} is ready!`);
+  console.log('🦁 LionBot is loading all files...');
+  console.log('🦁 LionBot is ready!');
 }
