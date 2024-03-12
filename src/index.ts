@@ -1,7 +1,7 @@
 import 'dotenv/config';
-import { Client, GatewayIntentBits } from 'discord.js';
 import { CommandKit } from 'commandkit';
-import path = require('path');
+import * as path from 'path';
+import { Client, GatewayIntentBits } from 'discord.js';
 
 const client = new Client({
   intents: [
@@ -14,6 +14,7 @@ const client = new Client({
 new CommandKit({
   client,
   commandsPath: path.join(__dirname, 'commands'),
+  devUserIds: ['710549603216261141'],
   skipBuiltInValidations: true,
   bulkRegister: true
 });
