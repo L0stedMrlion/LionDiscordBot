@@ -1,4 +1,4 @@
-import type { Client } from 'discord.js';
+import { Client, ActivityType } from 'discord.js';
 import type { CommandKit } from 'commandkit';
 
 export default function (
@@ -7,4 +7,8 @@ export default function (
   handler: CommandKit
 ) {
   console.log('🦁 LionBot is ready!');
+  client.user.setActivity({
+    name: "🦁 Lion's Project™",
+    type: ActivityType.Watching
+  });
 }
