@@ -7,8 +7,7 @@ module.exports = (client) => {
 
 let status = [
   {
-    name: "Watching Mrlion’s Stream",
-    type: ActivityType.Streaming,
-    url: "https://www.twitch.tv/lostedmrlion",
+    name: "🦁 Lion's Project™",
+    type: ActivityType.Watching,
   },
 ];
